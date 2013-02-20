@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NuevaCompraActivity" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="@string/nueva_compra"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/nombre_producto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre_producto"
+        android:inputType="text"
+        android:textColor="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/numero_unidades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/numero_unidades"
+        android:inputType="numberDecimal"
+        android:textColor="@android:color/darker_gray" />
+
+    <EditText
+        android:id="@+id/fecha_compra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/fecha_compra"
+        android:inputType="date"
+        android:textColor="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/guardar_compra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/guardar_compra" />
+
+</LinearLayout>
