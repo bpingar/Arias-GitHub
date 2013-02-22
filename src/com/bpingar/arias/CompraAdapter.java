@@ -12,35 +12,35 @@ import android.widget.TextView;
 
 public class CompraAdapter extends ArrayAdapter<Compra> {
 
-	public CompraAdapter(Context context, int textViewResourceId,
-			List<Compra> objects) {
+	public CompraAdapter(final Context context, final int textViewResourceId,
+			final List<Compra> objects) {
 		super(context, textViewResourceId, objects);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
-		if (convertView == null) {
-			LayoutInflater vi = (LayoutInflater) getContext().getSystemService(
-					Context.LAYOUT_INFLATER_SERVICE);
-			convertView = vi.inflate(R.layout.compra_item, null);
+	public View getView(final int position, View row,
+			final ViewGroup parent) {
+		if (row == null) {
+			final LayoutInflater vi = (LayoutInflater) getContext()
+					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+			row = vi.inflate(R.layout.compra_item, null);
 		}
 
-		Compra compra = getItem(position);
+		final Compra compra = getItem(position);
 
-		TextView nombreProducto = (TextView) convertView
+		final TextView nombreProducto = (TextView) row
 				.findViewById(R.id.nombre_producto_item);
 		nombreProducto.setText(compra.getNombreProducto());
 
-		TextView numeroUnidades = (TextView) convertView
+		final TextView numeroUnidades = (TextView) row
 				.findViewById(R.id.numero_unidades_item);
 		numeroUnidades.setText(compra.getNumeroUnidades().toString());
 
-		TextView fechaCompra = (TextView) convertView
+		final TextView fechaCompra = (TextView) row
 				.findViewById(R.id.fecha_compra_item);
 		fechaCompra.setText(new SimpleDateFormat("dd/MM/yyyy").format(compra
 				.getFechaCompra()));
 
-		return convertView;
+		return row;
 	}
 }

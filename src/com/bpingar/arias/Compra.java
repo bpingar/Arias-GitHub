@@ -3,16 +3,16 @@ package com.bpingar.arias;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Compra implements Serializable{
+public class Compra implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
-	String nombreProducto;
-	Float numeroUnidades;
-	Date fechaCompra;
 
-	public Compra(String nombreProducto, Float numeroUnidades,
-			Date fechaCompra) {
+	private String nombreProducto;
+	private Float numeroUnidades;
+	private Date fechaCompra;
+
+	public Compra(final String nombreProducto, final Float numeroUnidades,
+			final Date fechaCompra) {
 		this.nombreProducto = nombreProducto;
 		this.numeroUnidades = numeroUnidades;
 		this.fechaCompra = fechaCompra;
@@ -22,7 +22,7 @@ public class Compra implements Serializable{
 		return nombreProducto;
 	}
 
-	public void setNombreProducto(String numeroUnidades) {
+	public void setNombreProducto(final String numeroUnidades) {
 		this.nombreProducto = numeroUnidades;
 	}
 
@@ -30,7 +30,7 @@ public class Compra implements Serializable{
 		return numeroUnidades;
 	}
 
-	public void setNumeroUnidades(Float numeroUnidades) {
+	public void setNumeroUnidades(final Float numeroUnidades) {
 		this.numeroUnidades = numeroUnidades;
 	}
 
@@ -38,7 +38,7 @@ public class Compra implements Serializable{
 		return fechaCompra;
 	}
 
-	public void setFechaCompra(Date fechaCompra) {
+	public void setFechaCompra(final Date fechaCompra) {
 		this.fechaCompra = fechaCompra;
 	}
 }
